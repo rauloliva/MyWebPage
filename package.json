@@ -1,0 +1,22 @@
+{
+  "name": "mywebpage",
+  "version": "1.0.0",
+  "description": "My personal webpage about me",
+  "main": "index.html",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rauloliva/MyWebPage.git"
+  },
+  "author": "Raul Oliva",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rauloliva/MyWebPage/issues"
+  },
+  "homepage": "https://github.com/rauloliva/MyWebPage#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
