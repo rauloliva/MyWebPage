@@ -1,0 +1,56 @@
+.header {
+    background-color: $color-welcome;
+    color: #fff;
+    font-family: $font-primary;
+    display: grid;
+    grid-template-columns: 1fr;
+
+    &__title{
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(2, min-content);
+        justify-items: center;
+
+        &-1{
+            font-size: 2.7em; //43.2 px
+            text-transform: uppercase;
+        }
+
+        &-2{
+            font-family: $font-title-name;
+            font-size: 2em;
+            align-self: center;
+        }
+    }
+}
+
+@mixin navItem {
+    text-decoration: none;
+    font-size: 1.56em; //25px
+    font-family: inherit;
+    color: blue;
+    font-weight: 500;
+}
+
+.navbar {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content;
+    grid-column-gap: 2rem;
+
+    &__item-1{
+        justify-self: flex-end;
+        @include navItem;
+    }
+
+    &__item-2 {
+        @include navItem;
+    }
+}
+
+.content{
+    background-color: $color-welcome-secondary;
+    color: #fff;
+}
