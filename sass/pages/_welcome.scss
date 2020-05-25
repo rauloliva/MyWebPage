@@ -1,5 +1,5 @@
 .header {
-    background-color: $color-welcome;
+    background-image: linear-gradient(to right bottom, $color-welcome, rgb(115, 134, 107));
     color: #fff;
     font-family: $font-primary;
     display: grid;
@@ -27,10 +27,16 @@
 
 @mixin navItem {
     text-decoration: none;
-    font-size: 1.56em; //25px
+    font-size: 1.625em; //26px
     font-family: inherit;
-    color: blue;
-    font-weight: 500;
+    color: rgb(41, 83, 55);
+    font-weight: 600;
+    transition: all .2s;
+}
+
+@mixin navItemVisited {
+    color: rgb(57, 122, 79);
+    transition: all .2s;
 }
 
 .navbar {
@@ -42,15 +48,77 @@
 
     &__item-1{
         justify-self: flex-end;
-        @include navItem;
+        @include navItem;        
+
+        &:hover {
+            @include navItemVisited;
+        }
     }
 
     &__item-2 {
         @include navItem;
+
+        &:hover {
+            @include navItemVisited;
+        }
     }
 }
 
 .content{
     background-color: $color-welcome-secondary;
     color: #fff;
+    display: grid;
+    grid-template-columns: minmax(10px, 200px) 1fr minmax(10px, 200px);
+    grid-template-rows: repeat(auto-fit, min-content);
+    font-family: $font-primary;
+    padding: 2rem;
+
+    &-1{
+        grid-column: 2 / 3;
+        display: grid;
+    }
+
+    &__img{
+        width: 11rem;
+        height: 12rem;
+        border-radius: 50%;
+        justify-self: center;
+        //align-self: center;
+    }
+
+    &__title{
+        font-family: inherit;
+        text-transform: uppercase;
+    }
+
+    &__paragraph{
+        font-size: 1.375em; //22px
+    }
+}
+
+.footer {
+    background-color: $color-welcome-terciary;
+    color: rgb(190, 188, 188);
+    padding: 2rem;
+    text-align: center;
+    font-family: $font-primary;
+    font-size: 1.125em; //18px
+
+    &__copyright{
+        line-height: 3;
+    }
+}
+
+.repo__container{
+    font-family: $font-primary;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, min-content);
+    grid-row-gap: 5px;
+    padding: 5px;
+    margin-bottom: 2rem;
+} 
+
+.u-margin-top-2 {
+    margin-top: 2rem;
 }
