@@ -6,3 +6,30 @@ $font-primary: 'Pragati Narrow', sans-serif;
 $color-welcome: rgb(51, 180, 51);
 $color-welcome-secondary: rgb(68, 114, 91) ;
 $color-welcome-terciary: rgb(36, 80, 58) ;
+$color-project-name: rgb(5, 253, 129) ;
+$color-blue-light: rgb(128, 128, 248);
+
+//DISPLAYS
+$display-500: 31.25em; //500px
+$display-700: 43.75em; //700px
+$display-smallest: 62.5em; //1000px
+$display-small: 75em; //1200px
+
+//MIXINS
+@mixin navItem {
+    text-decoration: none;
+    font-size: 1.625em; //26px
+    font-family: inherit;
+    color: rgb(41, 83, 55);
+    font-weight: 600;
+    transition: all .2s;
+
+    @media only screen and(max-width: $display-500) {
+        font-size: 1.50em; //39 px
+    }
+}
+
+@mixin navItemVisited {
+    color: rgb(57, 122, 79);
+    transition: all .2s;
+}

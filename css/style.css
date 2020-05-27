@@ -27,6 +27,9 @@ body {
     .header__title-1 {
       font-size: 2.7em;
       text-transform: uppercase; }
+      @media only screen and (max-width: 62.5em) {
+        .header__title-1 {
+          font-size: 2.43em; } }
     .header__title-2 {
       font-family: "Dancing Script", cursive;
       font-size: 2em;
@@ -46,6 +49,9 @@ body {
     color: #295337;
     font-weight: 600;
     transition: all .2s; }
+    @media only screen and (max-width: 31.25em) {
+      .navbar__item-1 {
+        font-size: 1.50em; } }
     .navbar__item-1:hover {
       color: #397a4f;
       transition: all .2s; }
@@ -56,6 +62,9 @@ body {
     color: #295337;
     font-weight: 600;
     transition: all .2s; }
+    @media only screen and (max-width: 31.25em) {
+      .navbar__item-2 {
+        font-size: 1.50em; } }
     .navbar__item-2:hover {
       color: #397a4f;
       transition: all .2s; }
@@ -71,16 +80,30 @@ body {
   .content-1 {
     grid-column: 2 / 3;
     display: grid; }
+    @media only screen and (max-width: 75em) {
+      .content-1 {
+        grid-column: 1 / -1; } }
   .content__img {
     width: 11rem;
     height: 12rem;
     border-radius: 50%;
-    justify-self: center; }
+    justify-self: center;
+    margin-bottom: 1rem; }
+    @media only screen and (max-width: 62.5em) {
+      .content__img {
+        width: 7rem;
+        height: 8rem; } }
   .content__title {
     font-family: inherit;
     text-transform: uppercase; }
+    @media only screen and (max-width: 43.75em) {
+      .content__title {
+        font-size: 1.4em; } }
   .content__paragraph {
     font-size: 1.375em; }
+    @media only screen and (max-width: 43.75em) {
+      .content__paragraph {
+        font-size: 1.255em; } }
 
 .footer {
   background-color: #24503a;
@@ -100,6 +123,52 @@ body {
   grid-row-gap: 5px;
   padding: 5px;
   margin-bottom: 2rem; }
+  .repo__container-header {
+    font-family: inherit;
+    font-size: 1.35em;
+    font-weight: 600; }
+  .repo__container-link {
+    text-decoration: none;
+    color: #8080f8;
+    transition: all .3s; }
+    .repo__container-link:hover {
+      border-bottom: 2px solid currentColor;
+      transition: all .3s; }
+
+.projectName {
+  font-size: 1.40em;
+  margin-left: 5px;
+  color: #05fd81; }
+  @media only screen and (max-width: 43.75em) {
+    .projectName {
+      font-size: 1.30em; } }
+  @media only screen and (max-width: 31.25em) {
+    .projectName {
+      font-size: 1.125em; } }
 
 .u-margin-top-2 {
   margin-top: 2rem; }
+
+.social-media {
+  padding: 1.2rem 0;
+  display: grid;
+  grid-template-columns: repeat(5, min-content);
+  grid-column-gap: 1rem; }
+  .social-media-icon {
+    width: 70px;
+    height: 70px; }
+    @media only screen and (max-width: 43.75em) {
+      .social-media-icon {
+        width: 55px;
+        height: 55px; } }
+    @media only screen and (max-width: 31.25em) {
+      .social-media-icon {
+        width: 45px;
+        height: 45px; } }
+
+.contact-me {
+  justify-items: center; }
+
+hr {
+  height: 5px;
+  background-color: #fff; }
