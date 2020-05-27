@@ -19,6 +19,10 @@
             @media only screen and(max-width: $display-smallest) {
                 font-size: 2.43em; //39 px
             }
+
+            @media only screen and(max-width: $display-470) {
+                font-size: 1.875em; //30 px
+            }
         }
 
         &-2{
